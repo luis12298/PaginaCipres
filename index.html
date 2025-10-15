@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Residencial El Ciprés</title>
     <link rel="shortcut icon" href="imagenes/img/LOGO 23-05-2025.webp" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +18,15 @@
 
         .carousel-item img {
             height: 300px;
-            width: 400px;
+            width: 480px;
             object-fit: cover;
+            cursor: pointer;
         }
 
         section {
             scroll-margin-top: 80px;
         }
 
-        /* Galería */
         #galeria .carousel-item img {
             height: 720px;
             object-fit: cover;
@@ -68,6 +68,13 @@
     </nav>
 
     <!-- Inicio -->
+
+
+    <!-- <section id="" class="py-3">
+        <div class="container text-center">
+            <div id="aviso"></div>
+        </div>
+    </section> -->
     <section id="inicio" class="bg-light py-5">
         <div class="container text-center">
             <h1 class="display-4" style="font-family: 'Oswald', 'sans-serif';">Bienvenido a Residencial El Ciprés</h1>
@@ -77,9 +84,11 @@
     </section>
 
     <!-- Lotes -->
-    <section id="lotes" class="py-5">
+    <section id="lotes" class="py-1">
         <div class="container">
             <h1 class="text-center mb-4">Lotes Disponibles</h1>
+            <!-- Aquí se cargarán los lotes dinámicamente -->
+
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="lotesContainer"></div>
         </div>
     </section>
@@ -91,34 +100,35 @@
             <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-inner shadow">
                     <div class="carousel-item active">
-                        <img src="imagenes/img/1.jpg" class="d-block w-100" alt="Vista general de la lotificadora">
+                        <img src="imagenes/img/1.jpg" class="d-block w-100 img-galeria" alt="Vista general"
+                            data-bs-interval="3000">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/2.jpg" class="d-block w-100" alt="Calle principal de la lotificadora">
+                        <img src="imagenes/img/2.jpg" class="d-block w-100 img-galeria" alt="Calle principal">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/3.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/3.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/4.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/4.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/5.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/5.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/6.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/6.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/7.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/7.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/8.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/8.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/9.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/9.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                     <div class="carousel-item">
-                        <img src="imagenes/img/10.jpg" class="d-block w-100" alt="Área verde de la lotificadora">
+                        <img src="imagenes/img/10.jpg" class="d-block w-100 img-galeria" alt="Área verde">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria"
@@ -133,47 +143,20 @@
         </div>
     </section>
 
-    <!-- Información -->
-    <div id="informacion" class="container py-4 mt-5">
-        <h1>Información adicional</h1>
-        <h4>Nuestros lotes cuentan con los siguientes beneficios:</h4>
-        <ul style="list-style: none; padding-left: 0;">
-            <li><i class="bi bi-check-circle-fill me-2"></i> Energía eléctrica</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Agua potable</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Alcantarillado</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Áreas verdes</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Portal de acceso</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Calles vehiculadas</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Construcción inmediata</li>
-            <li><i class="bi bi-check-circle-fill me-2"></i> Sin prima</li>
-        </ul>
-        <p style="font-weight: bold;">Nuestros lotes cuentan con financiamiento para 10 años con cuotas fijas mensuales
-            sin interes.
-        </p>
-    </div>
+    <div id="informacion" class="container py-4 mt-5"></div>
+    <!-- Sugerencias -->
+    <section class="py-5">
+        <div class="container text-center">
+            <div id="sugerencias">
 
+
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer id="contacto" class="bg-dark text-white py-4 mt-5">
         <div class="container text-left">
-            <H4>Horarios de atencion</H4>
-            <p><i class="bi bi-clock me-2"></i> Lunes a Viernes: 8:30 AM - 3:30 PM</p>
-            <p><i class="bi bi-clock me-2"></i> Sábados: 8:30 AM - 12:00 PM</p>
-            <h4>Contacto</h4>
-            <p><i class="bi bi-whatsapp me-2"></i> WhatsApp: +504 9369-9763</p>
-            <div class="mt-3 p-2">
-                <a href="https://wa.me/50493699763" target="_blank" class="btn btn-success">
-                    <i class="bi bi-whatsapp me-2"></i> Whatsapp
-                </a>
-            </div>
-            <p><i class="bi bi-telephone me-2"></i> Teléfono: +504 9369-9763</p>
-            <p><i class="bi bi-geo-alt me-2"></i> Calle salida a Masaguara, Jesús de Otoro</p>
-            <div class="mt-3 p-2">
-                <a href="https://maps.app.goo.gl/m6Duha9VwYEtQHHy7" target="_blank" class="btn btn-primary">
-                    <i class="bi bi-geo-alt me-2"></i> Ver en Google Maps
-                </a>
-            </div>
-            <p><i class="bi bi-envelope me-2"></i> Email: inmobiliariavictory24@gmail.com
-            </p>
+            <div id="footer"></div>
         </div>
     </footer>
 
@@ -190,154 +173,51 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js">
+
+    </script>
+    <script src="sugerencia.js"></script>
 
     <script>
-        // Cerrar navbar al hacer clic fuera o en enlaces
-        document.addEventListener('click', function (event) {
-            const navbar = document.getElementById('navbarNav');
-            const toggler = document.querySelector('.navbar-toggler');
-            const isClickInsideNavbar = navbar.contains(event.target);
-            const isClickOnToggler = toggler.contains(event.target);
+        //solo renders
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("informacion.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("informacion").innerHTML = data;
+                })
+                .catch(error => console.error("Error al cargar informacion.html:", error));
 
-            if (navbar.classList.contains('show') && !isClickInsideNavbar && !isClickOnToggler) {
-                const bsCollapse = new bootstrap.Collapse(navbar, { toggle: false });
-                bsCollapse.hide();
-            }
+            fetch("avisos.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("aviso").innerHTML = data;
+                })
+                .catch(error => console.error("Error al cargar informacion.html:", error));
+
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer").innerHTML = data;
+                })
+                .catch(error => console.error("Error al cargar informacion.html:", error));
+
+            // fetch("sugerencias.html")
+            //     .then(response => response.text())
+            //     .then(data => {
+            //         document.getElementById("sugerencias").innerHTML = data;
+            //     })
+            //     .catch(error => console.error("Error al cargar informacion.html:", error));
         });
 
-        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-            link.addEventListener('click', function () {
-                const navbar = document.getElementById('navbarNav');
-                if (navbar.classList.contains('show')) {
-                    const bsCollapse = new bootstrap.Collapse(navbar, { toggle: false });
-                    bsCollapse.hide();
-                }
-            });
-        });
-
-        // Datos de lotes
-        const lotes = [
-            {
-                id: 22, carpeta: 'imagenes/Lote22/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.5,000', disponible: false,
-                info: ['Dimensiones: 10x18.45 (185.25 m²)', '#Lote: 22', 'Bloque: B']
-            },
-            {
-                id: 24, carpeta: 'imagenes/Lote24/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.5,000', disponible: true,
-                info: ['Dimensiones: 10x19 (191.50 m²)', '#Lote: 24', 'Bloque: B']
-            },
-            {
-                id: 25, carpeta: 'imagenes/Lote25/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.5,200', disponible: true,
-                info: ['Dimensiones: 10x19.30 (194.75 m²)', '#Lote: 25', 'Bloque: B']
-            },
-            {
-                id: 26, carpeta: 'imagenes/Lote26/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.5,300', disponible: true,
-                info: ['Dimensiones: 10x19.60 (197.75 m²)', '#Lote: 26', 'Bloque: B']
-            },
-            {
-                id: 32, carpeta: 'imagenes/Lote32/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.5,800', disponible: true,
-                info: ['Dimensiones: 10x21.15 (214.75 m²)', '#Lote: 32', 'Bloque: B']
-            },
-            {
-                id: 34, carpeta: 'imagenes/Lote34/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.6,100', disponible: true,
-                info: ['Dimensiones: 10x22.25 (225.25 m²)', '#Lote: 34', 'Bloque: B']
-            },
-            {
-                id: 35, carpeta: 'imagenes/Lote35/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.6,200', disponible: true,
-                info: ['Dimensiones: 10x22.80 (229 m²)', '#Lote: 35', 'Bloque: B']
-            },
-            {
-                id: 63, carpeta: 'imagenes/Lote63/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.4,100', disponible: true,
-                info: ['Dimensiones: 10x19.50 (195.04 m²)', '#Lote: 63', 'Bloque: E']
-            },
-            {
-                id: 67, carpeta: 'imagenes/Lote67/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.6,200', disponible: true,
-                info: ['Dimensiones: 14x21.61 (194.76 m²)', '#Lote: 67', 'Bloque: F']
-            },
-            {
-                id: 71, carpeta: 'imagenes/Lote71/', cantidad: 3, extension: 'jpg', precio: 'Cuota: L.4,300', disponible: true,
-                info: ['Dimensiones: 10x20 (205.01 m²)', '#Lote: 71', 'Bloque: F']
-            },
-
-        ];
-
-        // Obtener imágenes
-        function obtenerImagenes(lote) {
-            const imagenes = [];
-            const extension = lote.extension || 'jpg';
-            const nombreLote = lote.carpeta.split('/').filter(Boolean).pop();
-            for (let i = 1; i <= lote.cantidad; i++) {
-                imagenes.push(`${lote.carpeta}${nombreLote}_${i}.${extension}`);
-            }
-            return imagenes;
-        }
-
-        // Crear tarjeta
-        function crearCard(lote) {
-            const imagenes = obtenerImagenes(lote);
-            const disponibleClass = lote.disponible ? 'success' : 'danger';
-            const disponibleText = lote.disponible ? 'Disponible' : 'Vendido';
-            const botonWhatsapp = lote.disponible
-                ? `<a href="https://wa.me/50493699763?text=Me interesa el lote ${lote.id}" class="btn btn-success w-100" target="_blank">
-            <i class="bi bi-whatsapp"></i> Cotizar
-          </a>` : '';
-
-            return `
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <div id="carousel${lote.id}" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                ${imagenes.map((img, i) => `
-                  <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                    <img src="${img}" class="d-block w-100 img-lote" alt="Lote ${lote.id} - Imagen ${i + 1}" data-img="${img}">
-                  </div>`).join('')}
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel${lote.id}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel${lote.id}" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </button>
-            </div>
-            <div class="card-body">
-              <span class="badge bg-${disponibleClass} mb-2">${disponibleText}</span>
-              <h5 class="card-title">${lote.precio}</h5>
-              <ul class="list-unstyled mb-3">
-                ${lote.info.map(item => `<li>• ${item}</li>`).join('')}
-              </ul>
-              ${botonWhatsapp}
-            </div>
-          </div>
-        </div>`;
-        }
-
-        // Renderizar tarjetas
-        function renderizarLotes() {
-            const container = document.getElementById('lotesContainer');
-            container.innerHTML = lotes.map(crearCard).join('');
-
-            // Evento de clic en imágenes para abrir vista previa
-            document.querySelectorAll('.img-lote').forEach(img => {
-                img.addEventListener('click', () => {
-                    const modal = new bootstrap.Modal(document.getElementById('modalImagen'));
-                    const imagenAmpliada = document.getElementById('imagenAmpliada');
-                    imagenAmpliada.src = img.dataset.img;
-                    modal.show();
-                });
-            });
-        }
-
-        // Cargar al inicio
-        window.addEventListener('load', () => {
-            renderizarLotes();
-
-            const galeria = document.getElementById('carouselGaleria');
-            const carousel = new bootstrap.Carousel(galeria);
-            galeria.querySelectorAll('.carousel-item img').forEach(img => {
-                img.addEventListener('click', () => carousel.next());
-            });
-        });
     </script>
+    <script>
+
+    </script>
+
 </body>
 
 </html>
